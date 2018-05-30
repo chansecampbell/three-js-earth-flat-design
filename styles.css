@@ -1,0 +1,16 @@
+html {
+  background: #422039;
+}
+
+* {
+ padding: 0px;
+ margin: 0px;
+}
+
+#stars {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.5;
+}
