@@ -66,14 +66,14 @@ function createCamera() {
 
 function createRenderer() {
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-  renderer.setClearColor( 0xffffff, 0);
+  renderer.setClearColor(0xffffff, 0);
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 function createLight() {
-  light = new THREE.HemisphereLight( 0xffffff )
-  light.position.set( 1, 1, 1 )
-  scene.add( light )
+  light = new THREE.HemisphereLight(0xffffff);
+  light.position.set(1, 1, 1);
+  scene.add(light);
 }
 
 function init() {
@@ -96,7 +96,6 @@ function render() {
   scene.getObjectByName('moon').position.x = r * Math.cos(theta);
   scene.getObjectByName('moon').position.z = r * Math.sin(theta);
   scene.getObjectByName('earth').rotation.y += 0.00125;
-  // scene.getObjectByName('earth').rotation.y += 0.0005;
 
   renderer.render(scene, camera);
   requestAnimationFrame(render);
